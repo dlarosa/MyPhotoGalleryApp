@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MyPhotoGalleryApp", "MyPhotoGalleryApp\MyPhotoGalleryApp.xproj", "{AE02A465-B4A3-466F-8774-3B2196FF2192}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{66A6BC8F-480A-4504-A51D-DED1A4CF623E}"
+	ProjectSection(SolutionItems) = preProject
+		MyPhotoGalleryApp\global.json = MyPhotoGalleryApp\global.json
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
