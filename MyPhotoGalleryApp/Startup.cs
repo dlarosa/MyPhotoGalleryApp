@@ -5,14 +5,19 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.Data.Entity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Framework.DependencyInjection;
-using MyPhotoGalleryApp.wwwroot.Infrastructure;
-using MyPhotoGalleryApp.wwwroot.Infrastructure.Repositories;
-using MyPhotoGalleryApp.wwwroot.Infrastructure.Repositories.Abstract;
-using MyPhotoGalleryApp.wwwroot.Infrastructure.Services;
-using MyPhotoGalleryApp.wwwroot.Infrastructure.Services.Abstract;
+using MyPhotoGalleryApp.Infrastructure;
+using MyPhotoGalleryApp.Infrastructure.Repositories;
+using MyPhotoGalleryApp.Infrastructure.Repositories.Abstract;
+using MyPhotoGalleryApp.Infrastructure.Services;
+using MyPhotoGalleryApp.Infrastructure.Services.Abstract;
+
+
+using Microsoft.Extensions.DependencyInjection;
+using IServiceCollection = Microsoft.Extensions.DependencyInjection.IServiceCollection;
 
 
 namespace MyPhotoGalleryApp
