@@ -94,7 +94,7 @@ namespace MyPhotoGalleryApp
             // Add static files to the request pipeline.
             app.UseStaticFiles();
 
-            //AutoMapperConfiguration.Configure();
+            AutoMapperConfiguration.Configure();
 
             app.UseCookieAuthentication(options =>
             {
