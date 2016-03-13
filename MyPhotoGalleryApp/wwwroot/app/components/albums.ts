@@ -1,11 +1,11 @@
 ﻿import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
 import {Router, RouterLink} from 'angular2/router'
-import { Album } from '../core/domain/album';
-import { Paginated } from '../core/common/paginated';
-import { DataService } from '../core/services/dataService';
-import { UtilityService } from '../core/services/utilityService';
-import { Routes, APP_ROUTES } from '../routes';
+import { Album } from '../components/core/domain/album';
+import { Paginated } from '../components/core/common/paginated';
+import { DataService } from '../components/core/services/dataService';
+import { UtilityService } from '../components/core/services/utilityService';
+import { Routes, APP_ROUTES } from '../route';
 
 @Component({
     selector: 'albums',

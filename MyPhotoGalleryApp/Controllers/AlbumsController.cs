@@ -24,6 +24,7 @@ public class AlbumsController : Controller
         _loggingRepository = loggingRepository;
     }
 
+    [Authorize(Policy = "AdminOnly")]
     [HttpGet("{page:int=0}/{pageSize=12}")]
     public async Task<IActionResult> Get(int? page, int? pageSize)
     {
@@ -31,8 +32,7 @@ public class AlbumsController : Controller
 
         try
         {
-            if (await _authorizationService.AuthorizeAsync(User, "AdminOnly"))
-            {
+           
                 int currentPage = page.Value;
                 int currentPageSize = pageSize.Value;
 
@@ -58,12 +58,6 @@ public class AlbumsController : Controller
                     TotalPages = (int)Math.Ceiling((decimal)_totalAlbums / currentPageSize),
                     Items = _albumsVM
                 };
-            }
-            else
-            {
-                StatusCodeResult _codeResult = new StatusCodeResult(401);
-                return new ObjectResult(_codeResult);
-            }
         }
         catch (Exception ex)
         {
@@ -74,7 +68,7 @@ public class AlbumsController : Controller
         return new ObjectResult(pagedSet);
     }
 
-
+    [Authorize(Policy = "AdminOnly")]
     [HttpGet("{id:int}/photos/{page:int=0}/{pageSize=12}")]
     public PaginationSet<PhotoViewModel> Get(int id, int? page, int? pageSize)
     {

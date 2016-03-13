@@ -1,9 +1,9 @@
 ﻿import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
 import {Router, RouterLink} from 'angular2/router'
-import { Photo } from '../core/domain/photo';
-import { Paginated } from '../core/common/paginated';
-import { DataService } from '../core/services/dataService';
+import { Photo } from '../components/core/domain/photo';
+import { Paginated } from '../components/core/common/paginated';
+import { DataService } from '../components/core/services/dataService';
 
 @Component({
     selector: 'photos',

@@ -10,3 +10,5 @@ export class Home {
     constructor() {
 
     }
+
+}
